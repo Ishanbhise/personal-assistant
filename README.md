@@ -13,13 +13,9 @@ A modern, ChatGPT-style personal AI assistant built with Next.js and powered by 
 
 **Try it live:** [personal-assistant-vercel.vercel.app](https://personal-assistant-vercel.vercel.app)
 
-### Screenshots
+### Screenshot
 
-| Welcome Screen | Chat in Action |
-|:-:|:-:|
-| ![Welcome](public/screenshots/welcome.png) | ![Chat](public/screenshots/chat.png) |
-
-> To add screenshots, save them to `public/screenshots/` and they'll display here automatically.
+![Chat in Action](public/screenshots/chat.png)
 
 ## Features
 
