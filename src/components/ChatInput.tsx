@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import VoiceButton from "./VoiceButton";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
@@ -36,6 +37,10 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
     }
   };
 
+  const handleVoiceTranscript = useCallback((text: string) => {
+    setInput(text);
+  }, []);
+
   return (
     <div className="border-t px-4 pb-4 pt-3 md:px-8" style={{ borderColor: "var(--input-border)" }}>
       <div
@@ -56,6 +61,7 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
           className="max-h-[200px] flex-1 resize-none bg-transparent text-sm leading-relaxed outline-none placeholder:opacity-50 disabled:opacity-40"
           style={{ color: "var(--foreground)" }}
         />
+        <VoiceButton onTranscript={handleVoiceTranscript} disabled={disabled} />
         <button
           onClick={handleSubmit}
           disabled={disabled || !input.trim()}
@@ -71,7 +77,7 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
         </button>
       </div>
       <p className="mt-2 text-center text-xs opacity-40">
-        Press Enter to send, Shift+Enter for new line
+        Press Enter to send, Shift+Enter for new line, or click the mic to speak
       </p>
     </div>
   );
