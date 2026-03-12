@@ -2,14 +2,29 @@
 
 A modern, ChatGPT-style personal AI assistant built with Next.js and powered by [Groq](https://groq.com/) for lightning-fast inference.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_App-6c5ce7?style=for-the-badge)](https://personal-assistant-vercel.vercel.app)
+
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css)
 ![Groq](https://img.shields.io/badge/Groq-Llama_3.3_70B-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Demo
+
+**Try it live:** [personal-assistant-vercel.vercel.app](https://personal-assistant-vercel.vercel.app)
+
+### Screenshots
+
+| Welcome Screen | Chat in Action |
+|:-:|:-:|
+| ![Welcome](public/screenshots/welcome.png) | ![Chat](public/screenshots/chat.png) |
+
+> To add screenshots, save them to `public/screenshots/` and they'll display here automatically.
+
 ## Features
 
 - **Fast AI responses** — powered by Groq's lightning-fast inference with Llama 3.3 70B
+- **Voice-to-text input** — click the mic button and speak, powered by Web Speech API
 - **Conversation history** — conversations are saved in your browser's localStorage
 - **Multiple conversations** — create, switch between, and delete conversations
 - **Markdown rendering** — code blocks, bold, italic, headings, and lists are formatted
@@ -39,7 +54,7 @@ A modern, ChatGPT-style personal AI assistant built with Next.js and powered by 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/personal-assistant.git
+   git clone https://github.com/Ishanbhise/personal-assistant.git
    cd personal-assistant
    ```
 
@@ -98,6 +113,7 @@ src/
 │   ├── ChatInput.tsx            # Message input with auto-resize
 │   ├── ChatMessage.tsx          # Message bubble with markdown
 │   ├── Sidebar.tsx              # Conversation list sidebar
+│   ├── VoiceButton.tsx          # Voice-to-text via Web Speech API
 │   └── WelcomeScreen.tsx        # Landing screen with suggestions
 └── lib/
     ├── storage.ts               # localStorage helpers
